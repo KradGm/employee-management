@@ -35,7 +35,13 @@ class EmployeeApiApplicationTests {
         employeeService.getAllEmployees();
         verify(employeeRepository).findAll();
         verifyNoMoreInteractions(employeeRepository);verifyNoInteractions();
-
+    }
+    @Test
+    void getEmployeeById() {
+        Employee e = new Employee(1,"Enzo", "Dev",2000.0);
+        employeeService.getEmployeeById(1);
+        verify(employeeRepository).findById(1L);
+        verifyNoMoreInteractions(employeeRepository);verifyNoInteractions();
     }
 
 
