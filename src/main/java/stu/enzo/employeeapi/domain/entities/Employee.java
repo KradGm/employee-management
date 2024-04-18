@@ -17,6 +17,8 @@ public class Employee {
     private String name;
     private String role;
     private double salary;
+    @Column(name = "tax_rate")
+    private double taxRate;
 
 
 }
