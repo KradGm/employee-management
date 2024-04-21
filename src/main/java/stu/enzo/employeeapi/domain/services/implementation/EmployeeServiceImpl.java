@@ -62,10 +62,4 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee getEmployeeByRole(String role) {
         return employeeRepository.findByRole(role);
     }
-    @Override
-    public double calculateNetSalary(Employee employee) {
-        double grossSalary = employee.getSalary();
-        double taxRate = employee.getTaxRate();
-        return grossSalary * (1 - taxRate);
-    }
 }
