@@ -3,6 +3,7 @@ package stu.enzo.employeeapi.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import stu.enzo.employeeapi.domain.enums.RatLevel;
 
 @Getter
 @Setter
@@ -17,8 +18,5 @@ public class Employee {
     private String name;
     private String role;
     private double salary;
-    @Column(name = "tax_rate")
-    private double taxRate;
-
-
+    private RatLevel ratLevel;
 }
