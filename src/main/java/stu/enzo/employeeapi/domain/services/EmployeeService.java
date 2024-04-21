@@ -14,5 +14,5 @@ public interface EmployeeService {
     public Employee updateEmployee(Employee employee);
     public void deleteEmployee(long id);
     public Employee getEmployeeByRole(String role);
-
+    public double getEmployeeSalaryWithTax(Optional<Employee> employee);
 }
